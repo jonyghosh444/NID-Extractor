@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  kalnaanpr:
+    image: kalna-anpr
+    build:
+      context: .
+      dockerfile: ./Dockerfile-arm
+    ports:
+      - 9898:9898
+    restart: unless-stopped
